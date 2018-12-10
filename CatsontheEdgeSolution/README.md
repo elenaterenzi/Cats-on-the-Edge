@@ -1,4 +1,4 @@
-# Azure IoT Edge VS Code solution
+# Azure IoT Edge - VS Code solution
 Built using this extension for VS Code: https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-edge
 
 To create a solution for IoT Edge with VS Code follow these steps:
