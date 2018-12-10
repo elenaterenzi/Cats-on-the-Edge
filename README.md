@@ -5,8 +5,7 @@ This repository contains code from my experimention around Raspberry Pi + PiCame
 It all started with the idea of preserving endangered species. Given the lack of pictures of endangered species I ended up monitoring my cat since I had plenty of footage for my cat :)
 
 - I wanted to use a PiCamera since 1) I already had one and 2) it has very good resolution and does not add additional HW complexity.
-- I wanted to minimize the amount of code so I ended up using [Custom Vision APIs] (http://customvision.ai/
-) which now allows you to export a custom model to the edge
+- I wanted to minimize the amount of code so I ended up using [bla] (http://www.bla.com) [Custom Vision APIs] (http://customvision.ai/) which now allows you to export a custom model to the edge
 
 
 I did struggle a bit to find examples to use PiCamera instead of regular USB cameras. Since I could not find any tutorial I thought it was meaningful to publish my code as an example.
