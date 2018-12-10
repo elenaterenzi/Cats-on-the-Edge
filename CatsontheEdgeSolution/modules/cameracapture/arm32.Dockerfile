@@ -24,7 +24,9 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 RUN useradd -ms /bin/bash moduleuser
+#adding the user to the video group
 RUN sudo usermod -a -G video moduleuser
+#create a folder where moduleuser can write to
 RUN mkdir /camframes
 RUN chmod 777 /camframes
 USER moduleuser

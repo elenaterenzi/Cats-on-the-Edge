@@ -1,6 +1,9 @@
 # Cats-on-the-Edge
 This repository contains code from my experimention around Raspberry Pi + PiCamera and Azure IoT Edge
 
+## Original Idea
+It all started
+
 I did struggle a bit to find examples to use PiCamera instead of regular USB cameras. Since I could not find any tutorial I thought it was meaningful to publish my code as an example.
 
 This code was built following these tutorials:
@@ -15,5 +18,5 @@ https://docs.microsoft.com/en-us/azure/iot-edge/quickstart-linux
 ### Note for Raspberry and PiCamera
 You will notice that since we are using PiCamera you will have to modify the default Dockerfile to:
 - expose the PiCamera to the container (via HostConfig in createOptions: Binds and Devices need to be specified, see [deployment.template.json](https://github.com/elenaterenzi/Cats-on-the-Edge/blob/master/CatsontheEdgeSolution/deployment.template.json))
-- modify the [arm32 raspbian Dockerfile](https://github.com/elenaterenzi/Cats-on-the-Edge/blob/master/CatsontheEdgeSolution/modules/cameracapture/arm32.Dockerfile) so that the moduleuser can access the PiCamera (adding the user to the video group)
-- modify the [arm32 raspbian Dockerfile](https://github.com/elenaterenzi/Cats-on-the-Edge/blob/master/CatsontheEdgeSolution/modules/cameracapture/arm32.Dockerfile) so that the moduleuser can access the local disk creating a folder where the user has access
+- modify the [arm32/raspbian Dockerfile](https://github.com/elenaterenzi/Cats-on-the-Edge/blob/master/CatsontheEdgeSolution/modules/cameracapture/arm32.Dockerfile) so that the moduleuser can access the PiCamera (adding the user to the video group)
+- modify the [arm32/raspbian Dockerfile](https://github.com/elenaterenzi/Cats-on-the-Edge/blob/master/CatsontheEdgeSolution/modules/cameracapture/arm32.Dockerfile) so that the moduleuser can access the local disk creating a folder where the user has access
