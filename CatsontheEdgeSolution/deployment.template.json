@@ -42,7 +42,7 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.classifier.amd64}",
+              "image": "${MODULES.classifier.arm32v7}",
               "createOptions": "{}"
             }
           },
@@ -52,7 +52,7 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.cameracapture.amd64}",
+              "image": "${MODULES.cameracapture.arm32v7}",
               "createOptions": "{\"Env\":[\"IMAGE_PATH=picamera\",\"IMAGE_PROCESSING_ENDPOINT=http://classifier/image\"],\"HostConfig\": {\"Binds \": [\"/dev/vchiq:/dev/vchiq\"],\"Devices\": [{\"PathOnHost\": \"/dev/vchiq\",\"PathInContainer\": \"/dev/vchiq\", \"CgroupPermissions\": \"mrw\"}],\"Priviledged\":false}}"
             }
           }
