@@ -53,7 +53,7 @@
             "restartPolicy": "always",
             "settings": {
               "image": "${MODULES.cameracapture.amd64}",
-              "createOptions": "{\"Env\":[\"IMAGE_PATH=test_image1.jpg\",\"IMAGE_PROCESSING_ENDPOINT=http://classifier/image\"]}"
+              "createOptions": "{\"Env\":[\"IMAGE_PATH=picamera\",\"IMAGE_PROCESSING_ENDPOINT=http://classifier/image\"],\"HostConfig\": {\"Binds \": [\"/dev/vchiq:/dev/vchiq\"],\"Devices\": [{\"PathOnHost\": \"/dev/vchiq\",\"PathInContainer\": \"/dev/vchiq\", \"CgroupPermissions\": \"mrw\"}],\"Priviledged\":false}}"
             }
           }
         }
